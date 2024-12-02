@@ -22,6 +22,7 @@ export const createTask = async (state: FormState, formData: FormData) =>{
     }
     catch (error) {
         state.error = "タスクの作成に失敗しました";
+        console.log(error);
         return state;
     }
 
@@ -42,6 +43,7 @@ export const updateTask = async (id: string, state: FormState, formData: FormDat
     }
     catch (error) {
         state.error = "タスクの更新に失敗しました";
+        console.log(error);
         return state;
     }
 
@@ -55,6 +57,7 @@ export const deleteTask = async (id: string, state: FormState) =>{
     }
     catch (error) {
         state.error = "タスクの削除に失敗しました";
+        console.log(error);
         return state;
     }
 
